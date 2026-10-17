@@ -1,0 +1,7 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+asyncpg>=0.29
+bullmq>=2.9
+python-dotenv>=1.0
+slowapi>=0.1.9
+pydantic>=2.6

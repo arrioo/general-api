@@ -1,0 +1,15 @@
+{
+  "name": "general-worker",
+  "version": "1.0.0",
+  "private": true,
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "dependencies": {
+    "bullmq": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "ioredis": "^5.4.0",
+    "pg": "^8.12.0"
+  }
+}
