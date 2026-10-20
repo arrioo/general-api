@@ -5,7 +5,11 @@ const { Worker } = require("bullmq");
 const IORedis = require("ioredis");
 const { Pool } = require("pg");
 
-const db = new Pool({ connectionString: process.env.DATABASE_URL });
+const db = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  options: `-c search_path=${process.env.DATABASE_SCHEMA}`,
+});
+
 const connection = new IORedis(process.env.REDIS_URL || "redis://localhost:6379", {
   maxRetriesPerRequest: null, // required by BullMQ workers
 });
